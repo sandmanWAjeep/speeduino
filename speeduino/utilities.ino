@@ -236,7 +236,7 @@ void checkProgrammableIO()
     firstCheck = false;
     secondCheck = false;
    // if ( configPage13.outputPin[y] > 0 ) //if outputPin == 0 it is disabled
-    if ( (configPage13.outputPin[y] > 0) && currentStatus.engineIsRunning) )  //Sanders only enable aux outputs if engine is running
+    if ( (configPage13.outputPin[y] > 0) && (runSecsX10 > 5) )  //Sanders only enable aux outputs if engine is running
     { 
       //byte theIndex = configPage13.firstDataIn[y];
       data = ProgrammableIOGetData(configPage13.firstDataIn[y]);
